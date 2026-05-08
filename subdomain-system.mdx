@@ -1,0 +1,53 @@
+---
+title: Subdomain System
+description: How mysrvr.org routes subdomains to server pages.
+---
+
+# Subdomain System
+
+Every registered server gets a unique URL:
+
+```
+https://yourserver.mysrvr.org
+```
+
+---
+
+## How Routing Works
+
+When a request hits `*.mysrvr.org`, the server reads the subdomain from the `Host` header and looks it up in the database. If a match is found it renders that server's page — if not, you get a 404.
+
+No per-subdomain DNS setup is needed. A single wildcard DNS record points all subdomains to the same server, and the app handles routing from there.
+
+---
+
+## Wildcard SSL
+
+mysrvr.org uses a wildcard SSL certificate (`*.mysrvr.org`) so every subdomain — including brand new ones — is automatically covered by HTTPS the moment it's registered. No setup required on your end.
+
+---
+
+## Subdomain Availability
+
+Subdomains are first-come, first-served. Once registered, a subdomain belongs to that server until the listing is deleted.
+
+### Reserved Subdomains
+
+The following cannot be registered:
+
+- `www`
+- `api`
+- `dashboard`
+- `admin`
+- `mail`
+- `ftp`
+- `static`
+- `assets`
+
+Attempting to register a reserved subdomain will return an error.
+
+---
+
+## Changing Your Subdomain
+
+You can change your subdomain anytime from the [dashboard](/dashboard). The old subdomain is released immediately, so be sure before switching.

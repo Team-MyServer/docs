@@ -1,0 +1,81 @@
+---
+title: Bot Commands
+description: All slash commands available in the mysrvr.org bot.
+---
+
+# Bot Commands
+
+The mysrvr.org bot uses Discord slash commands. All commands require **Manage Server** permissions.
+
+---
+
+## /register
+
+Register your Discord server and create a listing on mysrvr.org.
+
+```
+/register subdomain:<your-subdomain>
+```
+
+| Parameter   | Type   | Required | Description                          |
+|-------------|--------|----------|--------------------------------------|
+| `subdomain` | string | ✅       | The subdomain you want (e.g. `cool`) |
+
+**Example:**
+```
+/register subdomain:coolkids
+```
+
+Creates a listing at `coolkids.mysrvr.org`.
+
+<Warning>
+  Once a subdomain is taken it cannot be claimed by another server. Choose carefully.
+</Warning>
+
+---
+
+## /remove
+
+Remove your server's listing from mysrvr.org.
+
+```
+/remove
+```
+
+Permanently deletes your listing and releases your subdomain. Your Discord server is not affected.
+
+<Warning>
+  This action is irreversible. Your subdomain may be claimed by someone else after deletion.
+</Warning>
+
+---
+
+## /info
+
+View your server's current listing details.
+
+```
+/info
+```
+
+Returns your subdomain, visibility status, invite URL, and description.
+
+---
+
+## /settings
+
+Update your listing settings from Discord.
+
+```
+/settings
+```
+
+Lets you update:
+
+- **Description** — A short blurb shown on your listing page
+- **Invite URL** — The Discord invite shown to visitors
+- **Visibility** — Whether your server appears on the explore page
+
+<Info>
+  You can also manage everything from the dashboard at mysrvr.org/dashboard.
+</Info>

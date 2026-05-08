@@ -1,12 +1,12 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
-  "name": "Product Guide",
-  "description": "Step-by-step guides for every product—platform setup, analytics, and integrations in one place.",
+  "name": "mysrvr.org",
+  "description": "Documentation for mysrvr.org — the Discord server listing platform.",
   "colors": {
-    "primary": "#166E3F",
-    "light": "#26BD6C",
-    "dark": "#166E3F"
+    "primary": "#5865F2",
+    "light": "#7983F5",
+    "dark": "#4752C4"
   },
   "favicon": "/favicon.ico",
   "icons": {
@@ -15,63 +15,40 @@
   "styling": {
     "eyebrows": "breadcrumbs"
   },
-  "contextual": {
-    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
-  },
   "navigation": {
     "global": {
       "anchors": [
         {
           "anchor": "Home",
           "icon": "house",
-          "href": "/"
+          "href": "https://mysrvr.org"
         },
         {
-          "anchor": "Changelog",
-          "icon": "scroll-text",
-          "href": "https://www.mintlify.com/docs/changelog"
-        },
-        {
-          "anchor": "Help",
-          "icon": "life-buoy",
-          "href": "https://www.mintlify.com/docs/contact-support"
+          "anchor": "Dashboard",
+          "icon": "layout-dashboard",
+          "href": "https://mysrvr.org/dashboard"
         }
       ]
     },
     "directory": "card",
     "groups": [
       {
-        "group": "Platform",
-        "icon": "layers",
+        "group": "Get Started",
+        "icon": "rocket",
         "expanded": true,
         "pages": [
-          "platform/quickstart",
-          "platform/key-concepts",
-          "platform/configuration/settings",
-          "platform/configuration/user-management",
-          "platform/administration/roles-permissions"
+          "introduction",
+          "getting-started"
         ]
       },
       {
-        "group": "Analytics",
-        "icon": "chart-bar",
+        "group": "Using mysrvr.org",
+        "icon": "book-open",
         "expanded": true,
         "pages": [
-          "analytics/quickstart",
-          "analytics/connect-data",
-          "analytics/dashboards/create-dashboard",
-          "analytics/reports/scheduled-reports"
-        ]
-      },
-      {
-        "group": "Integrations",
-        "icon": "plug",
-        "expanded": true,
-        "pages": [
-          "integrations/quickstart",
-          "integrations/authentication",
-          "integrations/connectors/crm",
-          "integrations/webhooks/configure"
+          "bot-commands",
+          "dashboard",
+          "subdomain-system"
         ]
       }
     ]
@@ -81,17 +58,21 @@
     "dark": "/logo/dark.svg"
   },
   "navbar": {
-    "links": [],
+    "links": [
+      {
+        "label": "Website",
+        "href": "https://mysrvr.org"
+      }
+    ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Login with Discord",
+      "href": "https://mysrvr.org/auth/login"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/yourcompany",
-      "linkedin": "https://linkedin.com/company/yourcompany"
+      "discord": "https://discord.gg/yourinvite"
     }
   }
 }
